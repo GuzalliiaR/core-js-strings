@@ -302,8 +302,11 @@ function reverseString(str) {
  *   orderAlphabetically('textbook') => 'bekoottx'
  *   orderAlphabetically('abc123xyz') => '123abcxyz'
  */
-function orderAlphabetically(/* str */) {
-  throw new Error('Not implemented');
+function orderAlphabetically(str) {
+  const arr = str.split('');
+  const sortArr = arr.sort();
+  const sortStr = sortArr.join('');
+  return sortStr;
 }
 
 /** 17
