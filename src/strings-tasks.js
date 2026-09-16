@@ -411,8 +411,33 @@ function findLongestWord(/* sentence */) {
  *   reverseWords('Hello World') => 'olleH dlroW'
  *   reverseWords('The Quick Brown Fox') => 'ehT kciuQ nworB xoF'
  */
-function reverseWords(/* str */) {
-  throw new Error('Not implemented');
+function reverseWords(str) {
+  let i0 = 0;
+  let newStr = '';
+  let array;
+  let strReverse;
+
+  const arrayFromStr = str.split('');
+
+  arrayFromStr.forEach((element, i) => {
+    if (element === ' ') {
+      array = arrayFromStr.slice(i0, i);
+      strReverse = array.reverse().join('');
+
+      newStr = newStr.concat(strReverse).concat(' ');
+
+      i0 = i + 1;
+      array = [];
+      strReverse = '';
+    } else if (i === arrayFromStr.length - 1) {
+      array = arrayFromStr.slice(i0);
+      strReverse = array.reverse().join('');
+
+      newStr = newStr.concat(strReverse);
+    }
+  });
+
+  return newStr;
 }
 
 /** 22
@@ -430,7 +455,7 @@ function invertCase(/* str */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 23
  * Returns the result of string template and given parameters firstName and lastName.
  * Please do not use concatenation, use template string :
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings
@@ -447,7 +472,7 @@ function getStringFromTemplate(/* firstName, lastName */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 23
  * Extracts a name from template string 'Hello, First_Name Last_Name!'.
  *
  * @param {string} value - The input value.
@@ -461,7 +486,7 @@ function extractNameFromTemplate(/* value */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 25
  * Remove the first and last angle brackets from tag string
  *
  * @param {string} str - The input tag.
@@ -476,7 +501,7 @@ function unbracketTag(/* str */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 26
  * Extracts e-mails from single string with e-mails list delimited by semicolons
  *
  * @param {string} str - The input string.
@@ -495,7 +520,7 @@ function extractEmails(/* str */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 27
  * Encode specified string with ROT13 cipher
  * See details:  https://en.wikipedia.org/wiki/ROT13
  *
@@ -515,7 +540,7 @@ function encodeToRot13(/* str */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 28
  * Returns playid card id.
  *
  * Playing cards initial deck includes the cards in the following order:
