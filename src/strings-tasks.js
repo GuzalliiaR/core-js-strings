@@ -5,7 +5,7 @@
  *                                                                                           *
  ******************************************************************************************* */
 
-/**
+/** 1
  * Returns the length of the given string.
  *
  * @param {string} value - The input string to calculate the length of.
@@ -29,7 +29,7 @@ function getStringLength(value) {
   return number;
 }
 
-/**
+/** 2
  * Returns true if the value is a string, otherwise returns false.
  *
  * @param {string} value - The value to check if it's a string.
@@ -51,7 +51,7 @@ function isString(value) {
   return false;
 }
 
-/**
+/** 3
  * Returns the result of concatenation of two strings.
  *
  * @param {string} value1 - The first string to concatenate.
@@ -67,7 +67,7 @@ function concatenateStrings(value1, value2) {
   return value1.concat(value2);
 }
 
-/**
+/** 4
  * Returns the first character of the given string.
  *
  * @param {string} value - The input string to extract the first character from.
@@ -88,7 +88,7 @@ function getFirstChar(value) {
   return res;
 }
 
-/**
+/** 5
  * Removes leading and trailing whitespace characters from the string.
  *
  * @param {string} value - The input string to remove leading and trailing whitespaces from.
@@ -103,7 +103,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
   return value.trim();
 }
 
-/**
+/** 6
  * Removes only leading whitespace characters from the string.
  *
  * @param {string} value - The input string to remove leading whitespaces from.
@@ -118,7 +118,7 @@ function removeLeadingWhitespaces(value) {
   return value.trimStart();
 }
 
-/**
+/** 7
  * Removes only trailing whitespace characters from the string.
  *
  * @param {string} value - The input string to remove trailing whitespaces from.
@@ -129,11 +129,11 @@ function removeLeadingWhitespaces(value) {
  *   removeTrailingWhitespaces('cat ') => 'cat'
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
-function removeTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeTrailingWhitespaces(value) {
+  return value.trimEnd();
 }
 
-/**
+/** 8
  * Returns a string that is repeated the specified number of times.
  *
  * @param {string} str - The string to repeat.
@@ -150,7 +150,7 @@ function repeatString(/* str, times */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 9
  * Remove the first occurrence of a substring from a string.
  *
  * @param {string} str - The input string.
@@ -166,7 +166,7 @@ function removeFirstOccurrences(/* str, value */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 10
  * Remove the last occurrence of a substring from a string.
  *
  * @param {string} str - The input string.
