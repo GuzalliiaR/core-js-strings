@@ -190,11 +190,17 @@ function removeFirstOccurrences(str, value) {
  *   removeLastOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeLastOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+function removeLastOccurrences(str, value) {
+  const index = str.lastIndexOf(value);
+
+  if (index !== -1) {
+    return str.slice(0, index) + str.slice(index + value.length);
+  }
+
+  return str;
 }
 
-/**
+/** 11
  * Calculate the sum of character codes of the given string.
  *
  * @param {string} str - The input string.
@@ -210,7 +216,7 @@ function sumOfCodes(/* str */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 12
  * Checks if a string starts with a specific substring.
  *
  * @param {string} str - The input string.
@@ -225,7 +231,7 @@ function startsWith(/* str, substr */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 13
  * Checks if a string ends with a specific substring.
  *
  * @param {string} str - The input string.
@@ -240,7 +246,7 @@ function endsWith(/* str, substr */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 14
  * Returns a time string in the "mm:ss" format.
  *
  * @param {number} minutes - The number of minutes (non-negative integer).
@@ -257,7 +263,7 @@ function formatTime(/* minutes, seconds */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 15
  * Returns a string in reverse order.
  *
  * @param {string} str - The input string.
@@ -271,7 +277,7 @@ function reverseString(/* str */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 16
  * Returns a string with characters in alphabetical order.
  *
  * @param {string} str - The input string.
@@ -286,7 +292,7 @@ function orderAlphabetically(/* str */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 17
  * Checks if a given string contains a specified substring.
  *
  * @param {string} str - The input string to search within.
@@ -302,7 +308,7 @@ function containsSubstring(/* str, substring */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 18
  * Returns the number of vowels in the string.
  * Vowels: 'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'.
  *
@@ -320,7 +326,7 @@ function countVowels(/* str */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 19
  * Returns true if the string is a palindrome; otherwise false.
  * https://en.wikipedia.org/wiki/Palindrome
  *
@@ -337,7 +343,7 @@ function isPalindrome(/* str */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 20
  * Find the longest word in the sentence. If there are multiple longest words,
  * the function returns the first one encountered.
  *
@@ -353,7 +359,7 @@ function findLongestWord(/* sentence */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 21
  * Returns the string where each word is reversed.
  *
  * @param {string} str - The input string.
@@ -367,7 +373,7 @@ function reverseWords(/* str */) {
   throw new Error('Not implemented');
 }
 
-/**
+/** 22
  * Inverts the case of each character in the given string.
  *
  * @param {string} str - The input string.
